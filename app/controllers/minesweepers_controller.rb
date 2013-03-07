@@ -1,0 +1,2 @@
+class MinesweepersController < ApplicationController
+end

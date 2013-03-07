@@ -1,0 +1,21 @@
+// Place all the styles related to the snakes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.board {
+  border: 3px solid black;
+  margin-left: 10px;
+}
+
+.segment, .head, .apple {
+  position: absolute;
+}
+
+
+.runningUI, .running .initialUI, .newGameUI, .newGame .initialUI {
+  display: none;
+}
+
+.initialUI, .running .runningUI, .newGame .newGameUI {
+  display: block;
+}
