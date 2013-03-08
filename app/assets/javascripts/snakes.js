@@ -1,6 +1,6 @@
 BOARD_SIZE = 20;
 SEGMENT_SIZE = 20;
-SHIFT = 17;
+SHIFT = 14;
 
 
 function Snake (name, headColor, bodyColor, body, head, dir) {
