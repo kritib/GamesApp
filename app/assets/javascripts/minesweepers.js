@@ -12,7 +12,7 @@ var Minesweeper = (function () {
     that.num_mines = num_mines;
 
     that.createSquares = function() {
-      for (i = 0, i < (width*height), i++) {
+      for (var i = 0, i < (width*height), i++) {
         that.tiles[i] = new Tile(i, width);
       }
     };
@@ -49,7 +49,15 @@ var Minesweeper = (function () {
       });
     };
 
-    that.draw = function () {
+    that.draw = function (element) {
+
+      element.append($("<div></div>")
+             .addClass("ms-board")
+      )
+
+      for (var i = 0, i < (width*height), i++) {
+        that.tiles[i].draw($(".ms-board"))
+      }
 
     };
 
@@ -116,8 +124,15 @@ var Minesweeper = (function () {
     that.neighbor_mines = 0;
 
 
-    that.draw = function() {
-
+    that.draw = function(element) {
+      element.append($("<div></div>")
+             .addClass("tile")
+             .addClass("tile[" + id + "]")
+             .css("top", that.row*TILE_SIZE)
+             .css("left", that.col*TILE_SIZE)
+             .css("width", TILE_SIZE)
+             .css("height", TILE_SIZE)
+      )
     }
 
   }
