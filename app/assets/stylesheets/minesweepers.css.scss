@@ -1,3 +1,13 @@
 // Place all the styles related to the minesweepers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.tile.btn {
+  position: absolute;
+  padding: 0px;
+}
+
+.tile.flagged {
+  background-color: red;
+}
